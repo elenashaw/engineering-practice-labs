@@ -1,0 +1,51 @@
+# === 操作系统与 IDE 相关 ===
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.bak
+
+# === 虚拟环境 (核心) ===
+.venv/
+venv/
+ENV/
+env/
+bin/
+lib/
+# 排除 pip 安装日志
+pip-log.txt
+pip-delete-this-directory.txt
+
+# === Python 相关缓存 ===
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+
+# === C++ 编译产物 (针对 algorithm/floyd-circle 等) ===
+*.exe
+*.out
+*.app
+*.o
+*.obj
+*.pdb
+*.ilk
+# 排除生成的测试数据 (如果不想上传大型 CSV)
+*.csv
+*.log
+
+# === 绘图与分析产物 ===
+# 建议排除自动生成的图片，只保留生成图片的脚本
+*.png
+*.svg
+*.pdf
+!README_assets/*.png  # 如果 README 需要展示图片，可以取消排除特定文件夹
+
+# === 机械/能源仿真临时文件 ===
+# 如果使用 MATLAB/Simulink 或类似工具
+*.asv
+*.slxc
+*.mex*

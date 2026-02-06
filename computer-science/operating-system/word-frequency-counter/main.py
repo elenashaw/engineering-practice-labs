@@ -105,10 +105,10 @@ def main(file_path, n_threads):
     # 维护线程，以防丢失
     threads = []
 
-    for i in range(n_threads):
+    for i in range(n_threads):   
         start, end = segments[i]
         t = threading.Thread(
-            target=count_words_in_chunk, 
+            target=count_words_in_chunk,   #注意这里不要加（），用名字
             args=(file_path, start, end, results, i)
             )
         # 存进线程列表
